@@ -8,6 +8,7 @@ typedef struct pilha {
     int* elementos;
     int topo;
     int capacidade;
+
 } pilha_t;
 
 pilha_t* criar_pilha(int capacidade) {
@@ -17,7 +18,31 @@ pilha_t* criar_pilha(int capacidade) {
     pilha->topo = -1;
     pilha->capacidade = capacidade;
 
+    return pilha;
 }
+
+int empilhar(pilha_t* pilha, int valor) {
+
+    if (pilha->topo >= pilha->capacidade) {
+        pilha->capacidade *= 2;
+        pilha->elementos = realloc(pilha->elementos, pilha->capacidade * sizeof(int));
+    }
+
+    pilha->topo++;
+    pilha->elementos[pilha->topo] = valor;
+    return 0;
+}
+int desempilhar(pilha_t* pilha) {
+    if (pilha->topo < 0) {
+        EXIT_FAILURE;
+    }
+    int valor = pilha->elementos[pilha->topo];
+    pilha->topo--;
+
+    return valor;
+}
+
+
 // empilhar
 // desempilhar
 // tamanho
