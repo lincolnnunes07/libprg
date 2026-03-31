@@ -6,4 +6,15 @@ pilha_t* criar_pilha(int capacidade);
 int empilhar(pilha_t* pilha, int valor);
 int desempilhar(pilha_t* pilha);
 
+// FILA
+typedef struct fila fila_t;
+fila_t* criar_fila(int capacidade);
+void enfileirar_fila (fila_t* fila, int valor);
+int desenfileirar_fila (fila_t* fila);
+int inicio_fila(fila_t* fila);
+int fim_fila(fila_t* fila);
+int vazia_fila(fila_t* fila);
+int cheia_fila(fila_t* fila);
+int destruir_fila(fila_t* fila);
+
 #endif
