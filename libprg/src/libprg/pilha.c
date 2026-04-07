@@ -42,7 +42,19 @@ int desempilhar(pilha_t* pilha) {
     return valor;
 }
 
+int tamanho(pilha_t* pilha) {
+    pilha->topo+1;
+}
 
+int vazia(pilha_t* pilha) {
+    return pilha->topo <0;
+}
+
+int destruir_pilha(pilha_t* pilha) {
+    free(pilha->elementos);
+    free(pilha);
+    return 0;
+}
 // empilhar
 // desempilhar
 // tamanho
