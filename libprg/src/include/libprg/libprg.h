@@ -1,7 +1,12 @@
 #ifndef LIBPRG_LIBPRG_H
 #define LIBPRG_LIBPRG_H
 // PILHA
-typedef struct pilha pilha_t;
+typedef struct pilha {
+    int* elementos;
+    int topo;
+    int capacidade;
+
+} pilha_t;;
 pilha_t* criar_pilha(int capacidade);
 int empilhar(pilha_t* pilha, int valor);
 int desempilhar(pilha_t* pilha);
@@ -11,7 +16,14 @@ int destruir_pilha(pilha_t* pilha);
 
 
 // FILA
-typedef struct fila fila_t;
+typedef struct fila {
+
+    int* elementos;
+    int inicio;
+    int fim;
+    int tamanho;
+    int capacidade
+} fila_t;
 fila_t* criar_fila(int capacidade);
 void enfileirar_fila (fila_t* fila, int valor);
 int desenfileirar_fila (fila_t* fila);
