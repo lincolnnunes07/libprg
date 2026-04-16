@@ -4,19 +4,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#define capacidade_inicial 10
+#include "libprg/libprg.h"
 
 typedef struct lista_linear {
-    int elementos;
+    int *elementos;
     int tamanho;
     int capacidade;
     bool ordenada;
-
 } lista_linear_t;
 
-int criar_lista(lista_linear_t* lista) {
+lista_linear_t *criar_lista(bool ordenada) {
+    lista_linear_t *lista = malloc(sizeof(lista_linear_t));
+    lista->elementos = malloc(sizeof(int) * capacidade_inicial);
+    lista->tamanho = 0;
+    lista->capacidade = capacidade_inicial;
+    lista->ordenada = ordenada;
 
-    lista->elementos = 0;
+    return lista;
 
 }
+remover(lista_linear_t* lista, int alvo) {
+    int indice;
 
-int
+    if (lista.ordenada) {
+        indice = buscar_binario
+    } else {
+        indice = buscar_linear
+    }
+
+
+
+
+// buscar_linear
+// buscar_binario
+// inserir
+// remover
+// alterar
+// ordenar
+// combinar
+// destruir
