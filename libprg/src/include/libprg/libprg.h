@@ -24,3 +24,8 @@ int destruir_fila(fila_t* fila);
 // LISTA
 typedef struct lista_linear lista_linear_t;
 #endif
+
+// LISTA ENCADEADA
+typedef struct no no_t;
+no_t* criar_lista_encadeada(int dado);
+void inserir_encadeada(no_t** inicio, int dado);
