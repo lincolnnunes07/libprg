@@ -1,5 +1,7 @@
 #ifndef LIBPRG_LIBPRG_H
 #define LIBPRG_LIBPRG_H
+#include <stdbool.h>
+
 // PILHA
 typedef struct pilha pilha_t;
 pilha_t* criar_pilha(int capacidade);
@@ -23,9 +25,13 @@ int destruir_fila(fila_t* fila);
 
 // LISTA
 typedef struct lista_linear lista_linear_t;
-#endif
 
 // LISTA ENCADEADA
 typedef struct no no_t;
 no_t* criar_lista_encadeada(int dado);
 void inserir_encadeada(no_t** inicio, int dado);
+no_t* buscar_encadeada(no_t** inicio, int dado);
+bool remover_encadeada(no_t** inicio, int dado);
+void destruir_encadeada(no_t** incio);
+
+#endif
